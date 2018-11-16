@@ -3,7 +3,7 @@
     "version": "0.0.0",
     "private": true,
     "scripts": {
-        "start": "node ./bin/www",
+        "start": "webpack --config webpack.config.js & supervisor ./bin/www",
         "dev": "webpack --config webpack.config.js"
     },
     "dependencies": {
@@ -14,9 +14,13 @@
         "http-errors": "~1.6.2",
         "lodash": "^4.17.11",
         "morgan": "~1.9.0",
-        "pug": "2.0.0-beta11"
+        "pug": "2.0.0-beta11",
+        "supervisor": "^0.12.0"
     },
     "devDependencies": {
+        "css-loader": "^1.0.1",
+        "file-loader": "^2.0.0",
+        "style-loader": "^0.23.1",
         "webpack": "^4.25.1",
         "webpack-cli": "^3.1.2"
     }

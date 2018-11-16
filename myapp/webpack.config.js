@@ -16,5 +16,14 @@ module.exports = {
         // hash : 一次构建整个的hash，所有文件的 [hash] 都一致
         // chunkhash : 单个文件的hash，每个文件不一致
         filename: "bundle.js",
+    },
+    module: {
+        rules: [{
+            test: /\.css$/,
+            use: [
+                'style-loader',
+                'css-loader'
+            ]
+        }]
     }
 }
